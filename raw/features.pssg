@@ -1,0 +1,36 @@
+# features
+
+postssg is a "fully-fledged" static site generator.
+it generates static sites. that's about it
+
+## syntax for files
+
+most of a file will be plain text. no special syntax,
+no ending lines with two spaces, nothing. whitespace
+is also preserved, because the entire page is inside
+of a "pre" tag.
+
+you can add links! wow!
+
+=> index.pssg
+=> pressg | https://spicata.github.io/pressg/
+
+the first line is a link to "index.pssg". every link
+that heads internally is absolute. the other line is
+a link to a website. links can be aliased, indicated
+by the inclusion of a "|" before the actual link.
+
+#### lines starting with at least one # will be bold
+
+lastly, postssg also has a "tags" system. tags allow
+you to automatically link to all pages which contain
+a specific tag. this will be demonstrated below.
+
+if a line ends with "<--", then the file gets tagged
+with the contents of the line. then, if another file
+has a line which starts with "-->", all tagged files
+with the tag following the --> will be linked to.
+
+--> tag-demo
+
+there are not many features. this is intentional

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      pre {
+        padding: 1ch;
+        background-color: #24273a;
+        color: #cad3f5;
+        min-height: 100vh;
+        border-left: 1ch solid #c6a0f6;
+        font-size: 1.25em;
+      }
+      a { color: #8aadf4; font-style: italic; text-decoration: none; }
+      a:visited { color: #c6a0f6; }
+      
+    </style>
+  </head>
+  <body>
+    <pre><a href="index.html">=> index.pssg</a>
+
+<b># features</b>
+
+postssg is a "fully-fledged" static site generator.
+it generates static sites. that's about it
+
+<b>## syntax for files</b>
+
+most of a file will be plain text. no special syntax,
+no ending lines with two spaces, nothing. whitespace
+is also preserved, because the entire page is inside
+of a "pre" tag.
+
+you can add links! wow!
+
+<a href="index.html">=> index.pssg</a>
+<a href=" https://spicata.github.io/pressg/">=> pressg | https://spicata.github.io/pressg/</a>
+
+the first line is a link to "index.pssg". every link
+that heads internally is absolute. the other line is
+a link to a website. links can be aliased, indicated
+by the inclusion of a "|" before the actual link.
+
+<b>#### lines starting with at least one # will be bold</b>
+
+lastly, postssg also has a "tags" system. tags allow
+you to automatically link to all pages which contain
+a specific tag. this will be demonstrated below.
+
+if a line ends with "<--", then the file gets tagged
+with the contents of the line. then, if another file
+has a line which starts with "-->", all tagged files
+with the tag following the --> will be linked to.
+
+--> tag-demo
+<a href="tag-demo-file.html">=> tag-demo-file.pssg</a>
+
+there are not many features. this is intentional
+</pre>
+  </body>
+</html>

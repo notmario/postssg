@@ -1,9 +1,0 @@
-posts <--
-
-This is a file in a subfolder. It should automatically
-be linked to on the main page, as it has a "posts <--"
-marking at the top of it. Notice how this file is nice
-and all of the lines line up. This is not a feature in
-postssg, you will have to do this yourself. But if you
-want to do it you can. It looks good, however you will
-have to spend a lot more time writing your documents..
