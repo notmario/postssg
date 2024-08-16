@@ -110,7 +110,7 @@ fn main() {
                             .expect("we know it starts with it")
                             .split("/")
                             .skip(1)
-                            .map(|a| "../")
+                            .map(|_| "../")
                             .collect::<Box<[&str]>>()
                             .join("");
                         let then_go = url
