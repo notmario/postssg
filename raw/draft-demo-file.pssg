@@ -1,0 +1,7 @@
+!! DRAFT !!
+
+tag-demo <--
+
+by including the text "!! DRAFT !!" in your file,
+the file will be marked as a draft and won't be
+linked to elsewhere, unless you specify it

@@ -33,4 +33,10 @@ with the tag following the --> will be linked to.
 
 --> tag-demo
 
+you can also tag files as drafts, which will prevent
+them from being automatically linked by the matching
+"-->" markers which is demonstrated in the next file
+
+=> draft-demo-file.pssg
+
 there are not many features. this is intentional

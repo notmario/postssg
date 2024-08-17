@@ -28,18 +28,22 @@ fn main() {
                 .unwrap_or("this is an absolutely FUCKED UP file".into())
                 .replace("\r\n", "\n");
             // println!("{}", f);
-            for l in f.lines() {
-                if l.ends_with(" <--") {
-                    let this_backlinks = backlinks
-                        .entry(l.strip_suffix(" <--").expect("it ends with it").to_string())
-                        .or_insert(Vec::new());
-                    this_backlinks.push(real_path.to_string().replace("\\", "/"));
-                    println!(
-                        "backlink of type {}! taking note",
-                        l.strip_suffix(" <--").expect("ends with")
-                    );
+
+            if !f.contains("!! DRAFT !!") {
+                for l in f.lines() {
+                    if l.ends_with(" <--") {
+                        let this_backlinks = backlinks
+                            .entry(l.strip_suffix(" <--").expect("it ends with it").to_string())
+                            .or_insert(Vec::new());
+                        this_backlinks.push(real_path.to_string().replace("\\", "/"));
+                        println!(
+                            "backlink of type {}! taking note",
+                            l.strip_suffix(" <--").expect("ends with")
+                        );
+                    }
                 }
             }
+
             files.insert(real_path.to_string().replace("\\", "/"), f);
         }
     }
