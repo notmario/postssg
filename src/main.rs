@@ -150,11 +150,15 @@ fn main() {
 
     for (k, v) in files {
         println!("===\n{}\n{}", k, v);
-        let out_thing = format!(
-            "{}{}.html",
-            OUT_DIR,
-            k.strip_suffix(".pssg").expect("um i dunno")
+        let path = k
+            .strip_suffix(".pssg")
+            .expect("it should end with pssg. if it doesnt i cry");
+        let out_thing = format!("{}{}.html", OUT_DIR, path);
+        let _ = fs::write(
+            out_thing,
+            template
+                .replace("||content||", &v)
+                .replace("||title||", &path),
         );
-        let _ = fs::write(out_thing, template.replace("||content||", &v));
     }
 }
